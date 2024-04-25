@@ -1,7 +1,7 @@
 import { describe, beforeEach, it, expect, vi } from 'vitest';
 import { ReservationAdapter, LegacyReservationSystem } from './questionNine';
 
-describe('Reservation System Tests', () => {
+describe('Question Nine Test Cases', () => {
     let legacySystem: LegacyReservationSystem;
     let adapter: ReservationAdapter;
 

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { Smartphone, MobileWeb, SmartphoneAdapter, MobileWebAdapter, App } from './questionTwelve';
 
-describe('Adapter Pattern Tests', () => {
+describe('Question Twelve Test Cases', () => {
     it('Smartphone Adapter should correctly delegate operations', () => {
         const smartphone = new Smartphone();
         const adapter = new SmartphoneAdapter(smartphone);

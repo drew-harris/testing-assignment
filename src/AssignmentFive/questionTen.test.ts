@@ -1,7 +1,7 @@
 import { describe, beforeEach, it, expect, vi } from 'vitest';
 import { BasicService, FeatureXDecorator, FeatureYDecorator } from './questionTen';
 
-describe('Decorator Pattern Tests', () => {
+describe('Question Ten Test Cases', () => {
     let basicService: BasicService;
     let featureX: FeatureXDecorator;
     let featureY: FeatureYDecorator;

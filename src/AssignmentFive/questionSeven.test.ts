@@ -1,7 +1,7 @@
 import { describe, beforeEach, it, expect, vi } from 'vitest';
 import { MessageBoard, ConcreteRider } from './questionSeven';
 
-describe('MessageBoard Functionality', () => {
+describe('Question Seven Test Cases', () => {
     let board: MessageBoard;
     let rider1: ConcreteRider;
     let rider2: ConcreteRider;

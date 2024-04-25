@@ -1,7 +1,7 @@
 import { describe, beforeEach, it, expect, vi } from 'vitest';
 import { NormalCarFactory, LuxuryCarFactory, CarService } from './questionEight';
 
-describe('Car Factory Tests', () => {
+describe('Question Eight Test Cases', () => {
     let normalFactory: NormalCarFactory;
     let luxuryFactory: LuxuryCarFactory;
     let service;
