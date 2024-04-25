@@ -3,7 +3,7 @@ import { PayPalService, PaymentProxy, Client } from './questionFour';
 
 vi.spyOn(console, 'log').mockImplementation(() => {});
 
-describe('Payment Processing Tests', () => {
+describe('Question Four Test Cases', () => {
   test('PayPalService processes payment correctly', () => {
     const payPalService = new PayPalService();
     payPalService.processPayment(100, 'USD');
