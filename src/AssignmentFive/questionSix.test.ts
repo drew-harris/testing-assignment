@@ -45,14 +45,4 @@ describe('Question Six Test Cases', () => {
         expect(updateSpy).toHaveBeenCalledWith('20% OFF');
         expect(console.log).toHaveBeenCalledWith('John, you have a new coupon: 20% OFF');
     });
-    
-    // Intentionally failing test
-    it('should fail when notifying a removed rider', () => {
-        couponService.registerRider(rider1);
-        couponService.removeRider(rider1);
-        couponService.notifyRiders('10% OFF');
-
-        expect(console.log).toHaveBeenCalledWith('John, you have a new coupon: 10% OFF');
-    });
-
 });

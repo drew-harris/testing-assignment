@@ -37,10 +37,4 @@ describe('Question Three Test Cases', () => {
     expect(console.log).toHaveBeenCalledWith('Providing CarEATS Service');
   });
 
-  // Intentionally failing test
-  test('Intentional failure for CarGo service', () => {
-    const carGo = new CarGo();
-    carGo.provideService();
-    expect(console.log).toHaveBeenCalledWith('Providing Nonexistent Service');
-  });
 });

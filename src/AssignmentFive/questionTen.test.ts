@@ -24,9 +24,4 @@ describe('Question Ten Test Cases', () => {
         expect(featureY.operation()).toBe("Basic Service + Feature Y");
     });
 
-    // Intentionally failing test
-    it('should fail when Feature Z is added since it does not exists', () => {
-        let combinedFeature = new FeatureXDecorator(new FeatureYDecorator(basicService));
-        expect(combinedFeature.operation()).toBe("Basic Service + Feature Y + Feature X + Feature Z");
-    });
 });

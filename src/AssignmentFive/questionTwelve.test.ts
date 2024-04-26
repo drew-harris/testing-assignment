@@ -17,13 +17,4 @@ describe('Question Twelve Test Cases', () => {
 
         expect(app.perform_operation()).toBe("Operation performed by Mobile Web");
     });
-
-    // Intentionally failing test
-    it('should fail when the wrong operation is returned', () => {
-        const smartphone = new Smartphone();
-        const adapter = new SmartphoneAdapter(smartphone);
-        const app = new App(adapter);
-
-        expect(app.perform_operation()).toBe("Operation performed by Mobile Web");
-    });
 });

@@ -34,12 +34,4 @@ describe('Question Seven Test Cases', () => {
         expect(console.log).not.toHaveBeenCalledWith('John received a message: "Sale ends today!"');
     });
 
-    // Intentionally failing test
-    it('should fail when notifying a removed rider', () => {
-        board.register(rider1);
-        board.unregister(rider1);
-        board.postMessage('New product launch!');
-
-        expect(console.log).toHaveBeenCalledWith('John received a message: "New product launch!"');
-    });
 });

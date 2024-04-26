@@ -39,10 +39,4 @@ describe('Question Two Test Cases', () => {
     expect(consoleSpy).toHaveBeenCalledWith('Booking carBlack ride: CarBlack Service Fee');
   });
 
-  // Intentionally failing test
-  test("Intentionally fail CarPoolService calculateFee", () => {
-    const service = new CarPoolService();
-    expect(service.calculateFee()).toBe('Incorrect Service Fee'); // This will fail
-  });
-
 });

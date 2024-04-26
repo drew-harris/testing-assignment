@@ -24,10 +24,4 @@ describe('Question Four Test Cases', () => {
     expect(console.log).toHaveBeenCalledWith('Processing payment through PayPal: 150 USD');
   });
 
-  // Intentionally failing test
-  test('PayPalService should fail with unsupported currency', () => {
-    const payPalService = new PayPalService();
-    payPalService.processPayment(50, 'Bitcoin'); // Assuming Bitcoin is not supported
-    expect(console.log).toHaveBeenCalledWith('Processing payment through PayPal: 50 Bitcoin'); 
-  });
 });

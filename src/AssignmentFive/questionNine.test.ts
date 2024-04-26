@@ -20,12 +20,4 @@ describe('Question Nine Test Cases', () => {
         expect(console.log).toHaveBeenCalledWith(`Reservation made for ${date} at ${location}`);
     });
 
-    // Intentionally failing test
-    it('should fail when the adapter misformats the reservation details', () => {
-        const date = "2024-01-02";
-        const location = "Central Station";
-        adapter.book_car(date, location);
-
-        expect(console.log).toHaveBeenCalledWith(`Reservation made for ${date} at incorrect location`);
-    });
 });

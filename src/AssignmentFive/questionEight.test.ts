@@ -32,11 +32,4 @@ describe('Question Eight Test Cases', () => {
         expect(console.log).toHaveBeenCalledWith('Luxury Car Fee Calculation');
     });
 
-    // Intentionally failing test
-    it('should fail to display the correct fee for a luxury car', () => {
-        service = new CarService(luxuryFactory);
-        service.displayFee();
-
-        expect(console.log).toHaveBeenCalledWith('Incorrect Luxury Car Fee');
-    });
 });
