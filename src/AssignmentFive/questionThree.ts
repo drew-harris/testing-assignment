@@ -21,17 +21,26 @@ export abstract class ServiceStrategy {
   }
   
   export class ServiceContext {
-    private strategy: ServiceStrategy;
+    private strategy: ServiceStrategy | null;
   
     constructor(strategy: ServiceStrategy) {
+      if (strategy === null || strategy === undefined) {
+        throw new Error("Strategy cannot be null or undefined");
+      }
       this.strategy = strategy;
     }
   
-    setStrategy(strategy: ServiceStrategy): void {
+    setStrategy(strategy: ServiceStrategy | null): void {
+      if (strategy === null || strategy === undefined) {
+        throw new Error("Strategy cannot be null or undefined");
+      }
       this.strategy = strategy;
     }
   
     provideService(): void {
+      if (this.strategy === null) {
+        throw new Error("No strategy set");
+      }
       this.strategy.provideService();
     }
   }

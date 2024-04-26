@@ -19,6 +19,9 @@ export class CouponService {
     }
 
     notifyRiders(coupon: string): void {
+        if (!coupon) {
+            throw new Error("Coupon code cannot be null or empty");
+        }
         this._riders.forEach(rider => rider.update(coupon));
     }
 }

@@ -22,10 +22,16 @@ export class SmartphoneAdapter extends IClientDevice {
 
     constructor(smartphone: Smartphone) {
         super();
+        if (!smartphone) {
+            throw new Error("Smartphone instance cannot be null");
+        }
         this.smartphone = smartphone;
     }
 
     request_operation(): string {
+        if (!this.smartphone.specific_operation) {
+            throw new Error("Operation failed due to invalid smartphone operation");
+        }
         return this.smartphone.specific_operation();
     }
 }

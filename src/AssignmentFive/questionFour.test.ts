@@ -23,5 +23,12 @@ describe('Question Four Test Cases', () => {
     expect(console.log).toHaveBeenCalledWith('Preparing data for PayPal format...');
     expect(console.log).toHaveBeenCalledWith('Processing payment through PayPal: 150 USD');
   });
+  test('PayPalService throws error on unsupported currency', () => {
+    const payPalService = new PayPalService();
+    const testUnsupportedCurrency = () => {
+      payPalService.processPayment(100, 'EUR'); // Attempt to process in Euros
+    };
+    expect(testUnsupportedCurrency).toThrow("Unsupported currency: EUR");
+  });
 
 });

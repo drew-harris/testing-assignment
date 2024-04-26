@@ -22,6 +22,9 @@ export class MessageBoard {
     }
 
     postMessage(message: string): void {
+        if (!message) {
+            throw new Error("Cannot post an empty message");
+        }
         console.log(`MessageBoard: New message posted - "${message}"`);
         this.notify(message);
     }

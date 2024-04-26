@@ -4,7 +4,9 @@ export abstract class PaymentService {
 
 export class PayPalService extends PaymentService {
     processPayment(amount: number, currency: string = "USD"): void {
-        // Hardcodes only USD as the currency for testing with other invalid currencies
+        if (currency !== "USD") {
+            throw new Error("Unsupported currency: " + currency);
+        }
         console.log(`Processing payment through PayPal: ${amount} USD`);
     }
 }

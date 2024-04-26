@@ -37,4 +37,12 @@ describe('Question Three Test Cases', () => {
     expect(console.log).toHaveBeenCalledWith('Providing CarEATS Service');
   });
 
+  test('ServiceContext throws error when setting a null strategy', () => {
+    const serviceContext = new ServiceContext(new BasicRide()); // Valid initialization
+    
+    // Test setting a null strategy
+    const setNullStrategy = () => serviceContext.setStrategy(null);
+    expect(setNullStrategy).toThrow("Strategy cannot be null or undefined");
+  });
+
 });

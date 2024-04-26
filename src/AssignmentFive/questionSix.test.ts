@@ -1,4 +1,4 @@
-import { describe, beforeEach, it, expect, vi } from 'vitest';
+import { describe, beforeEach, test, expect, vi } from 'vitest';
 import { Rider, CouponService, RiderImpl } from './questionSix';
 
 describe('Question Six Test Cases', () => {
@@ -15,7 +15,7 @@ describe('Question Six Test Cases', () => {
         vi.spyOn(console, 'log').mockImplementation(() => {});
     });
 
-    it('should register riders and notify them with a coupon', () => {
+    test('should register riders and notify them with a coupon', () => {
         couponService.registerRider(rider1);
         couponService.registerRider(rider2);
         couponService.notifyRiders('50% OFF');
@@ -25,7 +25,7 @@ describe('Question Six Test Cases', () => {
         expect(console.log).toHaveBeenCalledWith('Doe, you have a new coupon: 50% OFF');
     });
 
-    it('should remove a rider and not notify them', () => {
+    test('should remove a rider and not notify them', () => {
         couponService.registerRider(rider1);
         couponService.registerRider(rider2);
         couponService.removeRider(rider1);
@@ -35,7 +35,7 @@ describe('Question Six Test Cases', () => {
         expect(console.log).toHaveBeenCalledWith('Doe, you have a new coupon: 30% OFF');
     });
 
-    it('should correctly call update on riders when notifying', () => {
+    test('should correctly call update on riders when notifying', () => {
         const updateSpy = vi.spyOn(rider1, 'update');
 
         couponService.registerRider(rider1);
@@ -45,4 +45,14 @@ describe('Question Six Test Cases', () => {
         expect(updateSpy).toHaveBeenCalledWith('20% OFF');
         expect(console.log).toHaveBeenCalledWith('John, you have a new coupon: 20% OFF');
     });
+
+    test('should throw an error when notifying with a null coupon', () => {
+        couponService.registerRider(rider1);
+        const notifyWithNullCoupon = () => {
+            couponService.notifyRiders(null); // Trying to notify with a null coupon
+        };
+
+        expect(notifyWithNullCoupon).toThrow("Coupon code cannot be null or empty");
+    });
+    
 });

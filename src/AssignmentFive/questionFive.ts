@@ -32,6 +32,9 @@ export class RideService {
     }
 
     calculateFare(basePrice: number, distance: number, timeOfDay: TimeOfDay): number {
+        if (!['peak', 'non-peak', 'midnight'].includes(timeOfDay)) {
+            throw new Error(`Unsupported time of day: ${timeOfDay}`);
+        }
         return this.strategy.calculatePrice(basePrice, distance, timeOfDay);
     }
 }

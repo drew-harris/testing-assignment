@@ -38,5 +38,10 @@ describe('Question Two Test Cases', () => {
     facade.bookCarBlackRide();
     expect(consoleSpy).toHaveBeenCalledWith('Booking carBlack ride: CarBlack Service Fee');
   });
+  test("CarServiceFacade throws error on unsupported ride type", () => {
+    const facade = new CarServiceFacade();
+    const action = () => facade.bookUnknownRide(); 
+    expect(action).toThrow("Unsupported ride type requested");
+  });
 
 });

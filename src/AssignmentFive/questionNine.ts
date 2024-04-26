@@ -18,6 +18,12 @@ export class ReservationAdapter extends NewReservationInterface {
     }
 
     book_car(date: string, location: string): void {
+        if (!date || !location) {
+            throw new Error("Date and location must be provided");
+        }
+        if (date.length !== 10 || location.trim() === "") {
+            throw new Error("Invalid date or location format");
+        }
         this.legacy_system.make_reservation(date, location);
     }
 }

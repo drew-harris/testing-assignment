@@ -34,3 +34,9 @@ export class FeatureYDecorator extends ServiceDecorator {
         return `${this._service.operation()} + Feature Y`;
     }
 }
+
+export class FaultyService extends Service {
+    operation(): string {
+        throw new Error("Faulty service operation failed");
+    }
+}

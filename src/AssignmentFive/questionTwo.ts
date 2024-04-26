@@ -37,5 +37,8 @@ class Service {
       const service = new CarBlackService();
       console.log(`Booking carBlack ride: ${service.calculateFee()}`);
     }
+    bookUnknownRide() {
+      throw new Error("Unsupported ride type requested");
+    }
   }
   

@@ -43,6 +43,12 @@ export class LuxuryCarFactory extends CarFactory {
     }
 }
 
+export class FaultyCarFactory extends CarFactory {
+    createCar(): Car {
+        throw new Error("Car creation failed due to an internal error");
+    }
+}
+
 // Client class that uses factories to create cars
 export class CarService {
     private car;

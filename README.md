@@ -10,12 +10,7 @@ Ensure that you have NPM and NodeJS installed on your computer.
 
 You can also run tests in the browser with `npm run test-ui`
 
-Each test case for a question will intentionally have one test fail.
-This is what your terminal should show, you may need to scroll up to find it:
-
-![alt text](https://github.com/drew-harris/testing-assignment/blob/main/src/images/TestCasesTerminal1.PNG)
-
-![alt text](https://github.com/drew-harris/testing-assignment/blob/main/src/images/TestCasesTerminal2.PNG)
+Each test case for a question will have at least one test case throw an error.
 
 Below are what each file in the AssignmentFive folder corresponds to for each question from Assignment Four
 

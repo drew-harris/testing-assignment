@@ -1,20 +1,22 @@
-import { describe, beforeEach, it, expect, vi } from 'vitest';
-import { NormalCarFactory, LuxuryCarFactory, CarService } from './questionEight';
+import { describe, beforeEach, test, expect, vi } from 'vitest';
+import { NormalCarFactory, LuxuryCarFactory, CarService, FaultyCarFactory } from './questionEight';
 
 describe('Question Eight Test Cases', () => {
     let normalFactory: NormalCarFactory;
     let luxuryFactory: LuxuryCarFactory;
+    let faultyFactory: FaultyCarFactory;
     let service;
 
     beforeEach(() => {
         normalFactory = new NormalCarFactory();
         luxuryFactory = new LuxuryCarFactory();
+        faultyFactory = new FaultyCarFactory();
 
 
         vi.spyOn(console, 'log').mockImplementation(() => {});
     });
 
-    it('should display features and fee for a normal car', () => {
+    test('should display features and fee for a normal car', () => {
         service = new CarService(normalFactory);
         service.displayFeatures();
         service.displayFee();
@@ -23,7 +25,7 @@ describe('Question Eight Test Cases', () => {
         expect(console.log).toHaveBeenCalledWith('Normal Car Fee Calculation');
     });
 
-    it('should display features and fee for a luxury car', () => {
+    test('should display features and fee for a luxury car', () => {
         service = new CarService(luxuryFactory);
         service.displayFeatures();
         service.displayFee();
@@ -31,5 +33,12 @@ describe('Question Eight Test Cases', () => {
         expect(console.log).toHaveBeenCalledWith('Luxury Car Features');
         expect(console.log).toHaveBeenCalledWith('Luxury Car Fee Calculation');
     });
+    test('should throw an error when using a faulty factory', () => {
+        const createCarUsingFaultyFactory = () => {
+            service = new CarService(faultyFactory);  // This should fail
+            service.displayFeatures();
+        };
 
+        expect(createCarUsingFaultyFactory).toThrow("Car creation failed due to an internal error");
+    });
 });
