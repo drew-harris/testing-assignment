@@ -17,7 +17,7 @@ This is what your terminal should show, you may need to scroll up to find it:
 
 ![alt text](https://github.com/drew-harris/testing-assignment/blob/main/src/images/TestCasesTerminal2.PNG)
 
-Below are what each file corresponds to for each question from Assignment Four
+Below are what each file in the AssignmentFive folder corresponds to for each question from Assignment Four
 
 # questionTwo.ts and questionTwo.test.ts corresponds to this question:
 
