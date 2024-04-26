@@ -11,6 +11,12 @@ Ensure that you have NPM and NodeJS installed on your computer.
 You can also run tests in the browser with `npm run test-ui`
 
 Each test case for a question will intentionally have one test fail.
+This is what your terminal should show, you may need to scroll up to find it:
+
+!(https://github.com/drew-harris/testing-assignment/blob/main/src/images/TestCasesTerminal1.PNG)
+
+!(https://github.com/drew-harris/testing-assignment/blob/main/src/images/TestCasesTerminal2.PNG)
+
 Below are what each file corresponds to for each question from Assignment Four
 
 # questionTwo.ts and questionTwo.test.ts corresponds to this question:
