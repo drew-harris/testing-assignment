@@ -1,5 +1,5 @@
 import { describe, beforeEach, test, expect, vi } from 'vitest';
-import { BasicService, FeatureXDecorator, FeatureYDecorator, FaultyService } from './questionTen';
+import { BasicService, FeatureXDecorator, FeatureYDecorator, FaultyService } from './10. questionTen';
 
 describe('Question Ten Test Cases', () => {
     let basicService: BasicService;

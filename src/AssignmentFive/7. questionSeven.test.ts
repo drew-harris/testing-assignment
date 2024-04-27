@@ -1,5 +1,5 @@
 import { describe, beforeEach, test, expect, vi } from 'vitest';
-import { MessageBoard, ConcreteRider } from './questionSeven';
+import { MessageBoard, ConcreteRider } from './7. questionSeven';
 
 describe('Question Seven Test Cases', () => {
     let board: MessageBoard;

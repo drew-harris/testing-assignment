@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { Smartphone, MobileWeb, SmartphoneAdapter, MobileWebAdapter, App } from './questionTwelve';
+import { Smartphone, MobileWeb, SmartphoneAdapter, MobileWebAdapter, App } from './12. questionTwelve';
 
 describe('Question Twelve Test Cases', () => {
     test('Smartphone Adapter should correctly delegate operations', () => {

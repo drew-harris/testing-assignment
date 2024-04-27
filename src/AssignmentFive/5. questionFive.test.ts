@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { IPricingStrategy, RegularPricingStrategy, HighDemandPricingStrategy, RideService } from './questionFive';
+import { IPricingStrategy, RegularPricingStrategy, HighDemandPricingStrategy, RideService } from './5. questionFive';
 
 describe('Question Five Test Cases', () => {
     test('should calculate fare using RegularPricingStrategy', () => {
