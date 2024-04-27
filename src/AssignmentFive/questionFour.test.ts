@@ -1,5 +1,5 @@
 import { describe, test, expect, vi } from 'vitest';
-import { PayPalService, PaymentProxy, Client } from './4. questionFour';
+import { PayPalService, PaymentProxy, Client } from './questionFour';
 
 vi.spyOn(console, 'log').mockImplementation(() => {});
 

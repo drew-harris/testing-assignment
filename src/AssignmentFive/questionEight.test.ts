@@ -1,5 +1,5 @@
 import { describe, beforeEach, test, expect, vi } from 'vitest';
-import { NormalCarFactory, LuxuryCarFactory, CarService, FaultyCarFactory } from './8. questionEight';
+import { NormalCarFactory, LuxuryCarFactory, CarService, FaultyCarFactory } from './questionEight';
 
 describe('Question Eight Test Cases', () => {
     let normalFactory: NormalCarFactory;

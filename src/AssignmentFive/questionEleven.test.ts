@@ -1,5 +1,5 @@
 import { describe, beforeEach, test, expect, vi } from 'vitest';
-import { PricingStrategy, BasicPricingStrategy, DynamicPricingStrategy, ServiceHandler } from './11. questionEleven';
+import { PricingStrategy, BasicPricingStrategy, DynamicPricingStrategy, ServiceHandler } from './questionEleven';
 
 describe('Pricing Strategy Tests', () => {
     let serviceHandler: ServiceHandler;

@@ -1,5 +1,5 @@
 import { describe, beforeEach, test, expect, vi } from 'vitest';
-import { Rider, CouponService, RiderImpl } from './6. questionSix';
+import { Rider, CouponService, RiderImpl } from './questionSix';
 
 describe('Question Six Test Cases', () => {
     let couponService: CouponService;
