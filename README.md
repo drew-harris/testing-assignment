@@ -8,7 +8,17 @@ Ensure that you have NPM and NodeJS installed on your computer.
 2. Run tests with `npm run test`
 
 
-You can also run tests in the browser with `npm run test-ui`. 
+You can also run tests in the browser with `npm run test-ui`. Running this would be preferable. When you run using `npm run test-ui`, you should see this:
+
+![alt text] (https://github.com/drew-harris/testing-assignment/blob/main/src/images/TestCasesTerminal1.PNG)
+
+You can click on any of the test.ts files to see what the test cases were and if all of them passed
+
+![alt text] (https://github.com/drew-harris/testing-assignment/blob/main/src/images/TestCasesTerminal2.PNG)
+
+You can click on the code tab to view the code in the browser
+
+![alt text] (https://github.com/drew-harris/testing-assignment/blob/main/src/images/TestCasesTerminal3.PNG)
 
 Each test case for a question will have at least one test case throw an error.
 
