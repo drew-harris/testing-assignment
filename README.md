@@ -1,4 +1,8 @@
-# Team 4 Testing Assignment
+# Team 4 Assignment 5
+Instructions:
+Each team will work together.
+For each design pattern you identified and coded in Assignment 4, write a test case.
+Submission: Please upload your executable code for each case and a README file about how to run your code(command line and dependencies etc.)
 
 ## Directions to Run
 
@@ -12,7 +16,7 @@ You can also run tests in the browser with `npm run test-ui`. Running this would
 
 ![alt text](https://github.com/drew-harris/testing-assignment/blob/2549476a65a98bb034a89865b9ae0e7440dab269/src/images/TestCasesTerminal1.PNG)
 
-You can click on any of the test.ts files to see what the test cases were and if all of them passed
+You can click on any of the .test.ts files to see what the test cases were and if all of them passed
 
 ![alt text](https://github.com/drew-harris/testing-assignment/blob/2549476a65a98bb034a89865b9ae0e7440dab269/src/images/TestCasesTerminal2.PNG)
 
@@ -22,7 +26,7 @@ You can click on the code tab to view the code in the browser
 
 Each test case for a question will have at least one test case throw an error.
 
-Below are what each file in the AssignmentFive folder corresponds to for each question from Assignment Four
+Below are what each file in the AssignmentFive folder corresponds to for each question from Assignment Four. The files ending in .ts are the sample code, and the files ending in .test.ts are the test case for that corresponding .ts file
 
 # questionTwo.ts and questionTwo.test.ts corresponds to this question:
 
